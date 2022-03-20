@@ -198,7 +198,7 @@ public abstract class abs_mysqlFunctions implements int_mysqlFunctions {
     @Override
     public DatabaseMetaData obtener_metadatos(Connection con) {
         this.mysql = new abs_mysql() {
-        };System.out.println("hola");
+        };
         this.con = this.mysql.conectar(this.url, this.usuario, this.contraseña);
         try {
             this.metaData = this.con.getMetaData();
