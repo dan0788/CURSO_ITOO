@@ -1,0 +1,20 @@
+body{
+    text-decoration: none;
+}
+.nombre{
+    color: red;
+    background: green;
+    
+}
+.nombre:hover{
+    color: green;
+    background: red;
+}
+#auto{
+    background: red;
+    margin: 1px 1px;
+}
+#auto1{
+    background: green;
+    margin: 1px 1px;
+}
