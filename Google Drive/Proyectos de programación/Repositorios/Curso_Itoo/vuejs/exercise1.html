@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="contenedor">
+        <p>{{mensaje}} - <button v-on:click="btnSaludo">{{saludo}}</button></p>
+        <p>Has presionado del botón {{contador}} veces</p>
+        <p>Nombre:<input type="text" v-model="inputNombre" v-on:keyup.enter="btnNombre"><button @click="btnNombre">Ingresar nombre</button></p>
+        <p>{{nombre}}</p>
+        <a v-bind:href="url">{{url}}</a>
+    </div>
+    <script>
+        const vue = new Vue({//variables
+            el: "#contenedor",
+            data: {
+                mensaje: "Hola",
+                saludo: "Despedirse",
+                inputNombre: "",
+                nombre: "",
+                booleano: true,
+                contador: 0,
+                url: "https://www.itoo.dev"
+            }
+            , methods: {//métodos
+                labelMensaje() {
+                    return this.booleano ? "Hola" : "Adiós";
+                },
+                btnSaludo() {
+                    this.booleano = !this.booleano;
+                    this.mensaje = this.labelMensaje();
+                    this.saludo = this.booleano ? "Despedirse" : "Saludar";
+                    this.contador++;
+                },
+                btnNombre() {
+                    if (this.inputNombre != "") {
+                        this.nombre = this.inputNombre;
+                        this.inputNombre = "";
+                    }
+                }
+            }, computed: {//métodos computados
+
+            }
+        });
+    </script>
+</body>
+
+</html>

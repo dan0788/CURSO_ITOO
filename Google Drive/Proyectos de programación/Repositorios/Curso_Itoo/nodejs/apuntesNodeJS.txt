@@ -1,0 +1,43 @@
+node.js es un entorno de desarrollo, no es un framework
+los frameworks de node.js para entorno web son basados en express, es muy ligero
+node.js tiene un único hilo donde no es necesario que termine un evento para iniciar otro
+node.js tiene un modelo I/O orientado a objetos, asíncrono y de no bloqueo
+paralelismo:síncrono
+concurrencia:asíncrono
+<----------características y ventajas------------->
+es single thread
+es concurrente sin paralelismo
+es asíncrono y de no bloqueo
+orientado a eventos
+ejecuta aplicaciones en tiempo real
+basado en callbacks
+desde ecmascript6 se puede hacer promesas
+puede ser full stack javascript developer, es decir MEAN.js (MongoDB, Express, Angular, Node)
+app servidor - servidor (networking)
+
+<-------------arquitectura node------------------->
+código JS -> JS Engine (motor para compilar) -> código máquina
+cada navegador tiene su propio motor de JS
+en IE es Chakra, en Firefox es SpiderMonkey, en Chrome es V8
+mapeo
+javascript no es multihilo
+promesas:
+estados
+fullfilled - la promesa se llevó a cabo con éxito
+rejected - la promesa falló
+pending - aún no se ha determinado si la promesa es fullfilled o rejected
+setteld - ya se ha determinado si la promesa es fullfilled o rejected
+then, catch
+process controla todo el hilo de flujo 
+ejecutar node en consola: node file.js
+crear proyecto node con npm: npm init (si se añade --yes se crea todo por defecto)
+instalar paquete:npm install paquete@version (@version es opcional, por defecto descarga la última version)
+crear proyecto react: npx create-react-app my-app
+ejecutar react: entrar al proyecto y ejecutar npm start
+jsx es una extensión de js para escribir UI en reactJS
+en npm, jhonny5 sirve para controlar drones
+
+
+
+joi
+trim: elimina los espacios del principio y del final del valor
